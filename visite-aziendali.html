@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--
+  Gabriel's Portfolio — pagina: Visite aziendali
+  Sito statico (HTML + CSS + Bootstrap 5) realizzato per l'Esame di Stato.
+  Fogli condivisi: css/styles.css (stile e temi) e js/main.js (interazioni).
+  Autore: Gabriel Mazzucchelli.
+-->
+<html lang="it" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Visite aziendali — Gabriel's Portfolio</title>
+  <meta name="description" content="Le visite aziendali del percorso di formazione scuola-lavoro: Fonti Pineta (gruppo Bracca) per l'imbottigliamento dell'acqua oligominerale e Project for Building per l'edilizia sostenibile e il riciclo della plastica. Video, osservazioni e riflessioni.">
+  <meta name="author" content="Gabriel Mazzucchelli">
+  <meta name="theme-color" content="#14233F">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Visite aziendali — Gabriel's Portfolio">
+  <meta property="og:description" content="Le visite aziendali del percorso di formazione scuola-lavoro: Fonti Pineta (gruppo Bracca) per l'imbottigliamento dell'acqua oligominerale e Project for Building per l'edilizia sostenibile e il riciclo della plastica. Video, osservazioni e riflessioni.">
+  <meta property="og:locale" content="it_IT">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <!-- Script "anti-lampo": imposta subito il tema (chiaro/scuro) leggendo
+       la preferenza salvata in localStorage o quella di sistema, PRIMA che
+       la pagina venga disegnata, così si evita il lampo di colore al
+       caricamento. Aggiunge anche la classe "js" (usata dal CSS per le animazioni). -->
+  <script>(function(){try{var t=localStorage.getItem('gp-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}document.documentElement.classList.add('js');})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Salta al contenuto principale</a>
+  <!-- NAVBAR condivisa fra tutte le pagine: logo, link alle sezioni,
+       bottone del tema e menu per mobile. aria-current="page" marca la
+       pagina attiva; lo "skip-link" qui sopra serve a saltare al contenuto
+       usando la tastiera (accessibilità). -->
+  <header class="site-nav">
+    <nav class="nav-inner" aria-label="Navigazione principale">
+      <a class="brand" href="index.html" aria-label="Gabriel Mazzucchelli — Home">
+        <span class="brand-mark">GM</span>
+        <span class="brand-name">Gabriel <span class="sur">Mazzucchelli</span></span>
+      </a>
+      <div class="nav-collapse" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chi-sono.html">Chi sono</a></li>
+          <li><a href="project-work.html">Project Work</a></li>
+          <li><a href="visite-aziendali.html" class="active" aria-current="page">Visite</a></li>
+          <li><a href="esperienza-fsl.html">Esp. FSL</a></li>
+          <li><a href="educazione-civica.html">Ed. civica</a></li>
+          <li><a href="final-reflections.html">Reflections</a></li>
+        </ul>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Attiva il tema scuro">
+          <i class="bi bi-sun-fill" aria-hidden="true"></i><i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+        </button>
+        <button class="nav-toggler" type="button" aria-label="Apri il menu di navigazione" aria-expanded="false" aria-controls="navMenu">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <!-- PAGE HEADER -->
+    <section class="section--tight">
+      <div class="wrap">
+        <div class="dot-grid" aria-hidden="true" style="opacity:.35;"></div>
+        <p class="eyebrow reveal">Visite aziendali &middot; 3&ordf; e 4&ordf; Superiore</p>
+        <h1 class="reveal text-balance" data-delay="1" style="max-width:18ch;">Dentro due realtà industriali</h1>
+        <p class="lead reveal mw-60" data-delay="2">
+          Due visite, due settori diversi, un unico filo conduttore: vedere con i miei occhi come funziona
+          un&rsquo;impresa moderna, dalla produzione fino alla sostenibilità.
+        </p>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <section class="section">
+      <div class="wrap">
+
+        <!-- FONTI PINETA -->
+        <article class="feature">
+          <div>
+            <span class="pill reveal"><i class="bi bi-droplet" aria-hidden="true"></i> 3&ordf; Superiore</span>
+            <div class="h-with-num reveal" data-delay="1" style="margin-top:.8rem;"><span class="num">01</span><h2>Fonti Pineta</h2></div>
+            <p class="reveal" data-delay="1">
+              In terza superiore ho visitato lo stabilimento <strong>Fonti Pineta</strong>, che fa parte del
+              <strong>gruppo Bracca</strong>, a Clusone (BG). L&rsquo;azienda si occupa dell&rsquo;imbottigliamento
+              di <strong>acqua oligominerale</strong>. Durante la visita abbiamo seguito da vicino l&rsquo;intero processo
+              produttivo: dalla soffiatura delle bottiglie in PET, al riempimento automatizzato, fino al confezionamento
+              e alla logistica.
+            </p>
+            <p class="reveal" data-delay="2">
+              Mi ha colpito l&rsquo;<strong>efficienza</strong> del sistema, la <strong>precisione</strong> dei macchinari
+              e l&rsquo;attenzione all&rsquo;igiene e al controllo qualità. È stata un&rsquo;esperienza utile per capire come
+              si muove una realtà industriale moderna nel settore alimentare.
+            </p>
+            <h3 class="reveal" data-delay="2" style="font-size:1.1rem;margin-top:1.4rem;">Cosa ho osservato</h3>
+            <ul class="check-list reveal" data-delay="2">
+              <li>Il processo dalla <strong>soffiatura del PET</strong> al riempimento automatizzato</li>
+              <li>L&rsquo;<strong>automazione</strong> e la precisione delle linee di produzione</li>
+              <li>L&rsquo;attenzione all&rsquo;<strong>igiene</strong> e al controllo qualità</li>
+            </ul>
+          </div>
+          <div class="f-media reveal" data-delay="1">
+            <figure class="video-frame">
+              <span class="v-badge"><i class="bi bi-volume-mute-fill" aria-hidden="true"></i> Audio disattivato &middot; attivalo dai controlli</span>
+              <!-- Video: parte da solo, in loop e senza audio (muted); i controlli permettono di riattivare l’audio -->
+              <video autoplay muted loop playsinline controls preload="metadata" poster="img/poster-fonti-pineta.jpg">
+                <source src="img/video-fonti-pineta.mp4" type="video/mp4">
+                Il tuo browser non supporta il video.
+              </video>
+            </figure>
+            <figcaption>Video della visita allo stabilimento Fonti Pineta (gruppo Bracca).</figcaption>
+          </div>
+        </article>
+
+        <!-- PROJECT FOR BUILDING -->
+        <article class="feature">
+          <div class="f-media reveal">
+            <figure class="video-frame">
+              <span class="v-badge"><i class="bi bi-volume-mute-fill" aria-hidden="true"></i> Audio disattivato &middot; attivalo dai controlli</span>
+              <!-- Video: parte da solo, in loop e senza audio (muted); i controlli permettono di riattivare l’audio -->
+              <video autoplay muted loop playsinline controls preload="metadata" poster="img/poster-project-for-building.jpg">
+                <source src="img/video-project-for-building.mp4" type="video/mp4">
+                Il tuo browser non supporta il video.
+              </video>
+            </figure>
+            <figcaption>Video della visita a Project for Building: edilizia sostenibile e riciclo della plastica.</figcaption>
+          </div>
+          <div>
+            <span class="pill reveal"><i class="bi bi-recycle" aria-hidden="true"></i> 4&ordf; Superiore</span>
+            <div class="h-with-num reveal" data-delay="1" style="margin-top:.8rem;"><span class="num">02</span><h2>Project for Building</h2></div>
+            <p class="reveal" data-delay="1">
+              In quarta superiore ho visitato <strong>Project for Building</strong>, un&rsquo;azienda innovativa che si
+              occupa di <strong>edilizia sostenibile</strong> e <strong>riciclo dei materiali plastici</strong>. Ci hanno
+              spiegato l&rsquo;importanza dell&rsquo;<strong>economia circolare</strong> e mostrato come diversi tipi di
+              plastica (come PE, PP, PVC) vengano selezionati, riciclati e trasformati in materiali utilizzabili nel
+              mondo delle costruzioni.
+            </p>
+            <p class="reveal" data-delay="2">
+              È stato davvero interessante vedere come si possa dare <strong>nuova vita</strong> a materiali che altrimenti
+              finirebbero in discarica. La parte più coinvolgente è stata la spiegazione sui <strong>tipi di plastica</strong>
+              e le loro proprietà, e su come queste influenzano l&rsquo;uso nei cantieri.
+            </p>
+            <h3 class="reveal" data-delay="2" style="font-size:1.1rem;margin-top:1.4rem;">Cosa ho imparato</h3>
+            <ul class="check-list reveal" data-delay="2">
+              <li>I principi dell&rsquo;<strong>economia circolare</strong> applicati all&rsquo;edilizia</li>
+              <li>La selezione e il riciclo di <strong>PE, PP e PVC</strong></li>
+              <li>Come le <strong>proprietà</strong> di ogni plastica ne determinano l&rsquo;uso</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- RIFLESSIONE FINALE -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="panel panel--ink reveal">
+          <div class="split" style="align-items:center;">
+            <div>
+              <p class="eyebrow" style="color:var(--accent);">La mia riflessione</p>
+              <h2>Due settori, una stessa lezione</h2>
+              <p>
+                Pur essendo molto diverse — l&rsquo;acqua minerale da una parte, l&rsquo;edilizia sostenibile
+                dall&rsquo;altra — entrambe le visite mi hanno mostrato la stessa cosa: dietro a un prodotto finito
+                c&rsquo;è un&rsquo;organizzazione complessa, fatta di <strong>processi</strong>, <strong>tecnologia</strong>
+                e <strong>responsabilità</strong>.
+              </p>
+              <p>
+                Da Fonti Pineta ho colto l&rsquo;importanza dell&rsquo;efficienza e della qualità; da Project for Building
+                la consapevolezza ambientale e il valore del riciclo. Insieme mi hanno aiutato a capire meglio il mondo
+                del lavoro reale.
+              </p>
+            </div>
+            <div style="display:grid;gap:1rem;">
+              <div class="card" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18);">
+                <div class="card-ico" style="background:rgba(240,184,74,.18);color:var(--accent);"><i class="bi bi-gear-wide-connected" aria-hidden="true"></i></div>
+                <h3 style="color:#fff;">Efficienza &amp; qualità</h3>
+                <p style="color:#c3cde2;">Il lascito della visita a Fonti Pineta.</p>
+              </div>
+              <div class="card" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18);">
+                <div class="card-ico" style="background:rgba(240,184,74,.18);color:var(--accent);"><i class="bi bi-globe-europe-africa" aria-hidden="true"></i></div>
+                <h3 style="color:#fff;">Sostenibilità</h3>
+                <p style="color:#c3cde2;">Il lascito della visita a Project for Building.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- FOOTER condiviso: presentazione, mappa delle sezioni e riga finale.
+       L'anno del copyright (data-year) viene inserito dal JavaScript. -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html" aria-label="Gabriel Mazzucchelli — Home">
+            <span class="brand-mark">GM</span>
+            <span class="brand-name">Gabriel <span>Mazzucchelli</span></span>
+          </a>
+          <p>Portfolio del percorso di Formazione Scuola-Lavoro (FSL) e del progetto di Educazione Civica, realizzato per l'Esame di Stato. Indirizzo SIA — Sistemi Informativi Aziendali.</p>
+        </div>
+        <div>
+          <h4>Sezioni</h4>
+          <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chi-sono.html">Chi sono</a></li>
+          <li><a href="project-work.html">Project Work</a></li>
+          <li><a href="visite-aziendali.html">Visite aziendali</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Approfondimenti</h4>
+          <ul class="footer-links">
+          <li><a href="esperienza-fsl.html">Esperienza FSL</a></li>
+          <li><a href="educazione-civica.html">Educazione civica</a></li>
+          <li><a href="final-reflections.html">Final Reflections</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2025</span> Gabriel Mazzucchelli — Esame di Stato</span>
+        <span>Realizzato con HTML &amp; Bootstrap 5</span>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

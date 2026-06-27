@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!--
+  Gabriel's Portfolio — pagina: Final Reflections (in inglese)
+  Sito statico (HTML + CSS + Bootstrap 5) realizzato per l'Esame di Stato.
+  Fogli condivisi: css/styles.css (stile e temi) e js/main.js (interazioni).
+  Autore: Gabriel Mazzucchelli.
+-->
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Final Reflections — Gabriel's Portfolio</title>
+  <meta name="description" content="Final reflections in English on the school-to-work (FSL) experience: professional environment, communication and collaboration, personal growth, challenges faced, passion for computer science and future goals in software development.">
+  <meta name="author" content="Gabriel Mazzucchelli">
+  <meta name="theme-color" content="#14233F">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Final Reflections — Gabriel's Portfolio">
+  <meta property="og:description" content="Final reflections in English on the school-to-work (FSL) experience: professional environment, communication and collaboration, personal growth, challenges faced, passion for computer science and future goals in software development.">
+  <meta property="og:locale" content="en_US">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <!-- Script "anti-lampo": imposta subito il tema (chiaro/scuro) leggendo
+       la preferenza salvata in localStorage o quella di sistema, PRIMA che
+       la pagina venga disegnata, così si evita il lampo di colore al
+       caricamento. Aggiunge anche la classe "js" (usata dal CSS per le animazioni). -->
+  <script>(function(){try{var t=localStorage.getItem('gp-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}document.documentElement.classList.add('js');})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Salta al contenuto principale</a>
+  <!-- NAVBAR condivisa fra tutte le pagine: logo, link alle sezioni,
+       bottone del tema e menu per mobile. aria-current="page" marca la
+       pagina attiva; lo "skip-link" qui sopra serve a saltare al contenuto
+       usando la tastiera (accessibilità). -->
+  <header class="site-nav">
+    <nav class="nav-inner" aria-label="Navigazione principale">
+      <a class="brand" href="index.html" aria-label="Gabriel Mazzucchelli — Home">
+        <span class="brand-mark">GM</span>
+        <span class="brand-name">Gabriel <span class="sur">Mazzucchelli</span></span>
+      </a>
+      <div class="nav-collapse" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chi-sono.html">Chi sono</a></li>
+          <li><a href="project-work.html">Project Work</a></li>
+          <li><a href="visite-aziendali.html">Visite</a></li>
+          <li><a href="esperienza-fsl.html">Esp. FSL</a></li>
+          <li><a href="educazione-civica.html">Ed. civica</a></li>
+          <li><a href="final-reflections.html" class="active" aria-current="page">Reflections</a></li>
+        </ul>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Attiva il tema scuro">
+          <i class="bi bi-sun-fill" aria-hidden="true"></i><i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+        </button>
+        <button class="nav-toggler" type="button" aria-label="Apri il menu di navigazione" aria-expanded="false" aria-controls="navMenu">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <!-- PAGE HEADER -->
+    <section class="section--tight">
+      <div class="wrap">
+        <div class="dot-grid" aria-hidden="true" style="opacity:.35;"></div>
+        <p class="eyebrow reveal">Final Reflections &middot; Esame di Stato</p>
+        <h1 class="reveal text-balance" data-delay="1" style="max-width:16ch;">Looking back, looking forward</h1>
+        <p class="lead reveal mw-60" data-delay="2">
+          A few honest thoughts at the end of my final year of high school: what I have learned, how I have grown,
+          and where I want to go next.
+        </p>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- 01 THE FINAL YEAR -->
+    <section class="section">
+      <div class="wrap">
+        <div class="h-with-num reveal"><span class="num">01</span><h2>The end of a chapter</h2></div>
+        <div class="split reveal" data-delay="1">
+          <p>
+            Reaching the end of high school feels like closing a long and important chapter of my life. Over these years
+            I have changed a great deal — not only in what I know, but in how I think, work and face new situations. The
+            <strong>school-to-work training (FSL)</strong>, from the third to the fourth year, played a central role in that growth.
+          </p>
+          <p>
+            Looking back, I realise that the most valuable lessons did not always come from a textbook. They came from
+            stepping into real workplaces, meeting professionals, and discovering what is truly expected of me in the
+            world beyond school. Each stage of the journey left me with something I will carry forward.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 WHAT I LEARNED -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="h-with-num reveal"><span class="num">02</span><h2>What I learned</h2></div>
+        <div class="card-grid cols-2 mt-section">
+          <div class="card card-lift reveal" data-delay="1">
+            <div class="card-ico"><i class="bi bi-building" aria-hidden="true"></i></div>
+            <h3>Professional environment</h3>
+            <p>
+              I experienced real work settings, where I observed company operations, professional behaviour and the way
+              teams cooperate every day. This exposure helped me understand what a real job actually demands — punctuality,
+              reliability and respect for shared rules.
+            </p>
+          </div>
+          <div class="card card-lift reveal" data-delay="2">
+            <div class="card-ico"><i class="bi bi-chat-dots" aria-hidden="true"></i></div>
+            <h3>Communication &amp; collaboration</h3>
+            <p>
+              During the internship and the company visits I improved my ability to communicate clearly and to work
+              effectively within a group. I learned how to express my ideas respectfully, to listen to others, and to
+              value points of view different from my own.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 PERSONAL GROWTH -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="h-with-num reveal"><span class="num">03</span><h2>Personal growth</h2></div>
+        <div class="card-grid cols-3 mt-section">
+          <div class="card card-lift reveal" data-delay="1">
+            <div class="card-ico"><i class="bi bi-clock-history" aria-hidden="true"></i></div>
+            <h3>Responsibility</h3>
+            <p>I became far more responsible with my time and tasks. Being punctual and organised gradually turned into second nature.</p>
+          </div>
+          <div class="card card-lift reveal" data-delay="2">
+            <div class="card-ico"><i class="bi bi-rocket-takeoff" aria-hidden="true"></i></div>
+            <h3>Initiative</h3>
+            <p>I learned when to take initiative, ask the right questions and solve problems independently — key traits in any job.</p>
+          </div>
+          <div class="card card-lift reveal" data-delay="3">
+            <div class="card-ico"><i class="bi bi-emoji-smile" aria-hidden="true"></i></div>
+            <h3>Self&#8209;confidence</h3>
+            <p>With every new challenge I grew more confident in my abilities and more comfortable speaking up and sharing ideas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 CHALLENGES & PASSION -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="split">
+          <div class="reveal">
+            <div class="h-with-num"><span class="num">04</span><h2>Challenges &amp; passion</h2></div>
+            <p>
+              The journey was not without its challenges. Entering unfamiliar environments, adapting to people I had never
+              met and taking on tasks I had never done before pushed me out of my comfort zone. At first this felt
+              intimidating, but every difficulty I worked through became a small victory and a reason to trust myself more.
+            </p>
+            <p>
+              Through it all, my <strong>passion for computer science</strong> never faded — it grew stronger. The Project Work
+              on cybersecurity, in particular, reminded me why I love technology: the moment an abstract idea turns into
+              something that genuinely works.
+            </p>
+          </div>
+          <div class="reveal" data-delay="1">
+            <blockquote class="callout" style="border-left-width:4px;">
+              <span class="co-label"><i class="bi bi-quote" aria-hidden="true"></i> Overall satisfaction</span>
+              <p class="quote" style="font-size:1.3rem;">This journey was not just about learning professional skills, but about shaping my mindset and discovering strengths I didn&rsquo;t know I had.</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 LOOKING AHEAD -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="panel panel--ink reveal">
+          <div class="split" style="align-items:center;">
+            <div>
+              <p class="eyebrow" style="color:var(--accent);">Looking ahead</p>
+              <h2>My next steps</h2>
+              <p>
+                This is only the beginning of a longer journey. I want to keep studying what I am most passionate about, and
+                turn that passion into a profession in the world of technology and software development.
+              </p>
+            </div>
+            <div>
+              <ul class="check-list">
+                <li>A <strong>Bachelor&rsquo;s Degree in Computer Science (L&#8209;31)</strong></li>
+                <li>Already <strong>enrolled at the University of Milan</strong> (Statale)</li>
+                <li>Admitted through the ranking and <strong>officially enrolled</strong></li>
+                <li>A long&#8209;term career in <strong>software development</strong> and technology</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THANK YOU -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="reveal" style="text-align:center;max-width:60ch;margin-inline:auto;">
+          <span class="pill" style="margin-bottom:1rem;"><i class="bi bi-heart" aria-hidden="true"></i> Thank you</span>
+          <h2 class="text-balance">Thank you</h2>
+          <p class="lead">
+            I want to thank all the professionals, teachers, mentors and classmates who were part of this experience.
+            Their guidance, patience and support were essential to my growth.
+          </p>
+          <p class="quote" style="margin-top:1.5rem;">&ldquo;This is only the beginning of a longer journey.&rdquo;</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- FOOTER condiviso: presentazione, mappa delle sezioni e riga finale.
+       L'anno del copyright (data-year) viene inserito dal JavaScript. -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html" aria-label="Gabriel Mazzucchelli — Home">
+            <span class="brand-mark">GM</span>
+            <span class="brand-name">Gabriel <span>Mazzucchelli</span></span>
+          </a>
+          <p>Portfolio del percorso di Formazione Scuola-Lavoro (FSL) e del progetto di Educazione Civica, realizzato per l'Esame di Stato. Indirizzo SIA — Sistemi Informativi Aziendali.</p>
+        </div>
+        <div>
+          <h4>Sezioni</h4>
+          <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chi-sono.html">Chi sono</a></li>
+          <li><a href="project-work.html">Project Work</a></li>
+          <li><a href="visite-aziendali.html">Visite aziendali</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Approfondimenti</h4>
+          <ul class="footer-links">
+          <li><a href="esperienza-fsl.html">Esperienza FSL</a></li>
+          <li><a href="educazione-civica.html">Educazione civica</a></li>
+          <li><a href="final-reflections.html">Final Reflections</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2025</span> Gabriel Mazzucchelli — Esame di Stato</span>
+        <span>Realizzato con HTML &amp; Bootstrap 5</span>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

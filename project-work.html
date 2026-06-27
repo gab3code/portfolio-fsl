@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!--
+  Gabriel's Portfolio — pagina: Project Work — app LV8
+  Sito statico (HTML + CSS + Bootstrap 5) realizzato per l'Esame di Stato.
+  Fogli condivisi: css/styles.css (stile e temi) e js/main.js (interazioni).
+  Autore: Gabriel Mazzucchelli.
+-->
+<html lang="it" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Work — Gabriel's Portfolio</title>
+  <meta name="description" content="Il Project Work del terzo anno: sicurezza informatica con l'app LV8. Obiettivi, percorso di sviluppo, competenze acquisite e risultati raggiunti tra gioco, studio e competizione.">
+  <meta name="author" content="Gabriel Mazzucchelli">
+  <meta name="theme-color" content="#14233F">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Project Work — Gabriel's Portfolio">
+  <meta property="og:description" content="Il Project Work del terzo anno: sicurezza informatica con l'app LV8. Obiettivi, percorso di sviluppo, competenze acquisite e risultati raggiunti tra gioco, studio e competizione.">
+  <meta property="og:locale" content="it_IT">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <!-- Script "anti-lampo": imposta subito il tema (chiaro/scuro) leggendo
+       la preferenza salvata in localStorage o quella di sistema, PRIMA che
+       la pagina venga disegnata, così si evita il lampo di colore al
+       caricamento. Aggiunge anche la classe "js" (usata dal CSS per le animazioni). -->
+  <script>(function(){try{var t=localStorage.getItem('gp-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}document.documentElement.classList.add('js');})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Salta al contenuto principale</a>
+  <!-- NAVBAR condivisa fra tutte le pagine: logo, link alle sezioni,
+       bottone del tema e menu per mobile. aria-current="page" marca la
+       pagina attiva; lo "skip-link" qui sopra serve a saltare al contenuto
+       usando la tastiera (accessibilità). -->
+  <header class="site-nav">
+    <nav class="nav-inner" aria-label="Navigazione principale">
+      <a class="brand" href="index.html" aria-label="Gabriel Mazzucchelli — Home">
+        <span class="brand-mark">GM</span>
+        <span class="brand-name">Gabriel <span class="sur">Mazzucchelli</span></span>
+      </a>
+      <div class="nav-collapse" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chi-sono.html">Chi sono</a></li>
+          <li><a href="project-work.html" class="active" aria-current="page">Project Work</a></li>
+          <li><a href="visite-aziendali.html">Visite</a></li>
+          <li><a href="esperienza-fsl.html">Esp. FSL</a></li>
+          <li><a href="educazione-civica.html">Ed. civica</a></li>
+          <li><a href="final-reflections.html">Reflections</a></li>
+        </ul>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Attiva il tema scuro">
+          <i class="bi bi-sun-fill" aria-hidden="true"></i><i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+        </button>
+        <button class="nav-toggler" type="button" aria-label="Apri il menu di navigazione" aria-expanded="false" aria-controls="navMenu">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <!-- PAGE HEADER -->
+    <section class="section--tight">
+      <div class="wrap">
+        <div class="dot-grid" aria-hidden="true" style="opacity:.35;"></div>
+        <p class="eyebrow reveal">Project Work &middot; 3&ordf; Superiore</p>
+        <h1 class="reveal text-balance" data-delay="1" style="max-width:16ch;">Sicurezza informatica con LV8</h1>
+        <p class="lead reveal mw-60" data-delay="2">
+          Una sfida tra compagni, un&rsquo;esperienza di crescita e tanta sicurezza informatica:
+          il progetto che ha unito gioco, studio e competizione.
+        </p>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- INTRO + LOGO -->
+    <section class="section">
+      <div class="wrap">
+        <div class="split">
+          <div>
+            <div class="h-with-num reveal"><span class="num">01</span><h2>Un progetto coinvolgente</h2></div>
+            <p class="reveal" data-delay="1">
+              Durante il <strong>terzo anno</strong> ho partecipato a un Project Work in collaborazione con la
+              piattaforma <strong>LV8</strong>, un&rsquo;app pensata per insegnare la <strong>sicurezza
+              informatica</strong> in modo interattivo e stimolante.
+            </p>
+            <p class="reveal" data-delay="1">
+              Attraverso l&rsquo;app ci siamo <strong>sfidati tra compagni di classe</strong> completando missioni,
+              quiz e simulazioni reali. Oltre al divertimento, abbiamo imparato nozioni fondamentali su come navigare
+              in sicurezza online, riconoscere gli attacchi di <strong>phishing</strong> e proteggere i nostri dati.
+            </p>
+            <p class="reveal" data-delay="2">
+              È stata un&rsquo;esperienza che ha unito <strong>gioco, studio e competizione</strong>, aiutandoci a
+              sviluppare anche il lavoro di squadra e il pensiero critico.
+            </p>
+            <div class="tag-row reveal mt-section" data-delay="2">
+              <span class="pill"><i class="bi bi-controller" aria-hidden="true"></i> Gamification</span>
+              <span class="pill"><i class="bi bi-people" aria-hidden="true"></i> Lavoro di squadra</span>
+              <span class="pill"><i class="bi bi-shield-check" aria-hidden="true"></i> Cybersecurity</span>
+            </div>
+          </div>
+          <div class="reveal" data-delay="1">
+            <figure class="media-frame contain" style="aspect-ratio:4/3;">
+              <img src="img/lv8.jpg" alt="Logo dell'applicazione LV8 per la sicurezza informatica">
+            </figure>
+            <figcaption>L&rsquo;app LV8, cuore del Project Work del terzo anno.</figcaption>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBIETTIVI -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="h-with-num reveal"><span class="num">02</span><h2>Obiettivi del progetto</h2></div>
+        <div class="card-grid cols-3 mt-section">
+          <div class="card card-lift reveal" data-delay="1">
+            <div class="card-ico"><i class="bi bi-shield-lock" aria-hidden="true"></i></div>
+            <h3>Imparare la sicurezza</h3>
+            <p>Acquisire le basi della cybersecurity: navigare sicuri, riconoscere le minacce e difendere i dati personali.</p>
+          </div>
+          <div class="card card-lift reveal" data-delay="2">
+            <div class="card-ico"><i class="bi bi-people-fill" aria-hidden="true"></i></div>
+            <h3>Collaborare</h3>
+            <p>Affrontare le missioni come gruppo, confrontandosi e dividendosi i compiti per arrivare al risultato.</p>
+          </div>
+          <div class="card card-lift reveal" data-delay="3">
+            <div class="card-ico"><i class="bi bi-lightbulb" aria-hidden="true"></i></div>
+            <h3>Pensiero critico</h3>
+            <p>Valutare le situazioni, riconoscere i tentativi di inganno e scegliere il comportamento più sicuro.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="split">
+          <div>
+            <div class="h-with-num reveal"><span class="num">03</span><h2>Il percorso di sviluppo</h2></div>
+            <p class="lead reveal mw-60" data-delay="1">L&rsquo;app guidava l&rsquo;apprendimento per tappe, alternando teoria e prove pratiche.</p>
+          </div>
+          <div class="reveal" data-delay="1">
+            <div class="timeline">
+              <div class="tl-item">
+                <span class="tl-when">FASE 01</span>
+                <h4>Missioni guidate</h4>
+                <p>Percorsi tematici che introducevano i concetti di sicurezza uno alla volta.</p>
+              </div>
+              <div class="tl-item">
+                <span class="tl-when">FASE 02</span>
+                <h4>Quiz e verifiche</h4>
+                <p>Domande per consolidare le nozioni apprese e misurare i progressi.</p>
+              </div>
+              <div class="tl-item">
+                <span class="tl-when">FASE 03</span>
+                <h4>Simulazioni reali</h4>
+                <p>Scenari concreti, come email sospette, da analizzare e gestire in sicurezza.</p>
+              </div>
+              <div class="tl-item">
+                <span class="tl-when">FASE 04</span>
+                <h4>Sfida tra compagni</h4>
+                <p>La componente competitiva che ha reso il percorso coinvolgente e stimolante.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COSA HO IMPARATO + COMPETENZE -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="panel reveal">
+          <div class="split">
+            <div>
+              <div class="h-with-num"><span class="num">04</span><h2 style="font-size:clamp(1.5rem,1.2rem+1vw,2rem);">Cosa ho imparato</h2></div>
+              <ul class="check-list">
+                <li>Riconoscere gli attacchi di <strong>phishing</strong> e le email ingannevoli</li>
+                <li><strong>Proteggere i dati</strong> personali e usare credenziali sicure</li>
+                <li>Navigare online in modo <strong>consapevole e sicuro</strong></li>
+                <li>Capire i comportamenti a rischio e come evitarli</li>
+              </ul>
+            </div>
+            <div>
+              <h3 style="font-size:1.15rem;margin-bottom:.8rem;">Competenze sviluppate</h3>
+              <div class="tag-row">
+                <span class="tag"><i class="bi bi-shield-check" aria-hidden="true"></i> Sicurezza informatica</span>
+                <span class="tag"><i class="bi bi-people" aria-hidden="true"></i> Lavoro di squadra</span>
+                <span class="tag"><i class="bi bi-lightbulb" aria-hidden="true"></i> Pensiero critico</span>
+                <span class="tag"><i class="bi bi-puzzle" aria-hidden="true"></i> Problem solving</span>
+                <span class="tag"><i class="bi bi-chat-dots" aria-hidden="true"></i> Comunicazione</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RISULTATI / RIFLESSIONE -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="split" style="align-items:center;">
+          <div class="reveal">
+            <div class="h-with-num"><span class="num">05</span><h2>Risultati e riflessione</h2></div>
+            <p>
+              Il progetto ha trasformato un argomento spesso percepito come tecnico e distante in qualcosa di
+              <strong>vicino e quotidiano</strong>. Ho capito quanto la sicurezza informatica riguardi ognuno di noi,
+              ogni volta che usiamo uno smartphone o accediamo a un account.
+            </p>
+            <p>
+              Sul piano personale, la dimensione di squadra e la competizione mi hanno spinto a dare il meglio,
+              rafforzando la mia <strong>passione per l&rsquo;informatica</strong>.
+            </p>
+          </div>
+          <div class="reveal" data-delay="1">
+            <!-- Riquadro di sintesi neutro (descrizione del progetto, non una
+                 citazione personale): reso come paragrafo normale e non in stile
+                 "quote", così non sembra un'opinione virgolettata. -->
+            <div class="callout">
+              <span class="co-label"><i class="bi bi-lightbulb" aria-hidden="true"></i> Perch&eacute; &egrave; significativo</span>
+              <p style="margin-bottom:0;">Il progetto trasforma un tema tecnico come la sicurezza informatica in un&rsquo;esperienza concreta e quotidiana: un&rsquo;attivit&agrave; apparentemente semplice che si rivela un percorso formativo ricco e stimolante, capace di unire competenze digitali, lavoro di squadra e consapevolezza dei rischi online.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- FOOTER condiviso: presentazione, mappa delle sezioni e riga finale.
+       L'anno del copyright (data-year) viene inserito dal JavaScript. -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html" aria-label="Gabriel Mazzucchelli — Home">
+            <span class="brand-mark">GM</span>
+            <span class="brand-name">Gabriel <span>Mazzucchelli</span></span>
+          </a>
+          <p>Portfolio del percorso di Formazione Scuola-Lavoro (FSL) e del progetto di Educazione Civica, realizzato per l'Esame di Stato. Indirizzo SIA — Sistemi Informativi Aziendali.</p>
+        </div>
+        <div>
+          <h4>Sezioni</h4>
+          <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chi-sono.html">Chi sono</a></li>
+          <li><a href="project-work.html">Project Work</a></li>
+          <li><a href="visite-aziendali.html">Visite aziendali</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Approfondimenti</h4>
+          <ul class="footer-links">
+          <li><a href="esperienza-fsl.html">Esperienza FSL</a></li>
+          <li><a href="educazione-civica.html">Educazione civica</a></li>
+          <li><a href="final-reflections.html">Final Reflections</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2025</span> Gabriel Mazzucchelli — Esame di Stato</span>
+        <span>Realizzato con HTML &amp; Bootstrap 5</span>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

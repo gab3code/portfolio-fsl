@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<!--
+  Gabriel's Portfolio — pagina: Chi sono
+  Sito statico (HTML + CSS + Bootstrap 5) realizzato per l'Esame di Stato.
+  Fogli condivisi: css/styles.css (stile e temi) e js/main.js (interazioni).
+  Autore: Gabriel Mazzucchelli.
+-->
+<html lang="it" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chi sono — Gabriel's Portfolio</title>
+  <meta name="description" content="Gabriel Mazzucchelli si presenta: chi è, il percorso all'indirizzo SIA, l'esperienza di lavoro e le competenze acquisite, la passione per la tecnologia, lo sport e gli obiettivi futuri in Informatica (L-31) all'Università degli Studi di Milano.">
+  <meta name="author" content="Gabriel Mazzucchelli">
+  <meta name="theme-color" content="#14233F">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chi sono — Gabriel's Portfolio">
+  <meta property="og:description" content="Gabriel Mazzucchelli si presenta: chi è, il percorso all'indirizzo SIA, l'esperienza di lavoro e le competenze acquisite, la passione per la tecnologia, lo sport e gli obiettivi futuri in Informatica (L-31) all'Università degli Studi di Milano.">
+  <meta property="og:locale" content="it_IT">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <!-- Script "anti-lampo": imposta subito il tema (chiaro/scuro) leggendo
+       la preferenza salvata in localStorage o quella di sistema, PRIMA che
+       la pagina venga disegnata, così si evita il lampo di colore al
+       caricamento. Aggiunge anche la classe "js" (usata dal CSS per le animazioni). -->
+  <script>(function(){try{var t=localStorage.getItem('gp-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}document.documentElement.classList.add('js');})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Salta al contenuto principale</a>
+  <!-- NAVBAR condivisa fra tutte le pagine: logo, link alle sezioni,
+       bottone del tema e menu per mobile. aria-current="page" marca la
+       pagina attiva; lo "skip-link" qui sopra serve a saltare al contenuto
+       usando la tastiera (accessibilità). -->
+  <header class="site-nav">
+    <nav class="nav-inner" aria-label="Navigazione principale">
+      <a class="brand" href="index.html" aria-label="Gabriel Mazzucchelli — Home">
+        <span class="brand-mark">GM</span>
+        <span class="brand-name">Gabriel <span class="sur">Mazzucchelli</span></span>
+      </a>
+      <div class="nav-collapse" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chi-sono.html" class="active" aria-current="page">Chi sono</a></li>
+          <li><a href="project-work.html">Project Work</a></li>
+          <li><a href="visite-aziendali.html">Visite</a></li>
+          <li><a href="esperienza-fsl.html">Esp. FSL</a></li>
+          <li><a href="educazione-civica.html">Ed. civica</a></li>
+          <li><a href="final-reflections.html">Reflections</a></li>
+        </ul>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Attiva il tema scuro">
+          <i class="bi bi-sun-fill" aria-hidden="true"></i><i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+        </button>
+        <button class="nav-toggler" type="button" aria-label="Apri il menu di navigazione" aria-expanded="false" aria-controls="navMenu">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <!-- PAGE HEADER -->
+    <section class="section--tight">
+      <div class="wrap">
+        <div class="dot-grid" aria-hidden="true" style="opacity:.35;"></div>
+        <p class="eyebrow reveal">Chi sono</p>
+        <h1 class="reveal text-balance" data-delay="1" style="max-width:18ch;">La persona dietro al percorso</h1>
+        <p class="lead reveal mw-60" data-delay="2">
+          Non solo attività scolastiche: questa sezione racconta chi sono, cosa mi appassiona e
+          come la scuola superiore mi ha aiutato a crescere come studente e come persona.
+        </p>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- 01 PRESENTAZIONE -->
+    <section class="section">
+      <div class="wrap">
+        <div class="split split--narrow-media">
+          <div>
+            <div class="h-with-num reveal"><span class="num">01</span><h2>Presentazione personale</h2></div>
+            <p class="reveal" data-delay="1">
+              Mi chiamo <strong>Gabriel Mazzucchelli</strong> e sto concludendo il percorso di studi
+              all&rsquo;indirizzo <strong>SIA — Sistemi Informativi Aziendali</strong>. È un indirizzo che
+              unisce due mondi che mi interessano davvero: l&rsquo;<strong>informatica</strong> e l&rsquo;<strong>economia
+              aziendale</strong>, con uno sguardo costante a come la tecnologia entra nei processi reali di un&rsquo;impresa.
+            </p>
+            <p class="reveal" data-delay="1">
+              Mi descrivo come una persona <strong>curiosa</strong> e <strong>concreta</strong>: mi piace capire
+              come funzionano le cose, smontarle nel pensiero e rimetterle insieme. Sono metodico quando lavoro a
+              qualcosa che mi appassiona e do valore alla <strong>costanza</strong> più che agli slanci improvvisi.
+              Affronto i problemi un passo alla volta, senza scoraggiarmi quando la prima soluzione non funziona.
+            </p>
+          </div>
+          <div class="reveal" data-delay="2">
+            <div class="callout">
+              <span class="co-label"><i class="bi bi-chat-quote" aria-hidden="true"></i> In breve</span>
+              <p style="margin-bottom:.8rem;">Tre parole che mi rappresentano:</p>
+              <div class="tag-row">
+                <span class="tag"><i class="bi bi-search" aria-hidden="true"></i> Curiosità</span>
+                <span class="tag"><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Costanza</span>
+                <span class="tag"><i class="bi bi-bullseye" aria-hidden="true"></i> Concretezza</span>
+              </div>
+            </div>
+            <!-- Card "Oltre lo studio": rimanda all'esperienza di lavoro (sezione 04) -->
+            <div class="card" style="margin-top:1rem;">
+              <h3 style="font-size:1.15rem;">Oltre lo studio</h3>
+              <p class="muted" style="font-size:.95rem;margin-bottom:.7rem;">Lavoro mentre studio gi&agrave; dai 16 anni: un&rsquo;esperienza che mi ha dato metodo e competenze concrete.</p>
+              <div class="tag-row">
+                <span class="tag"><i class="bi bi-briefcase" aria-hidden="true"></i> Mondo del lavoro</span>
+                <span class="tag"><i class="bi bi-people" aria-hidden="true"></i> Rapporto col cliente</span>
+                <span class="tag"><i class="bi bi-check2-circle" aria-hidden="true"></i> Responsabilit&agrave;</span>
+              </div>
+              <a class="link-arrow" href="#lavoro" style="margin-top:.9rem;">La mia esperienza di lavoro <i class="bi bi-arrow-down" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 PERCORSO ACCADEMICO -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="h-with-num reveal"><span class="num">02</span><h2>Percorso accademico — SIA</h2></div>
+        <p class="lead reveal mw-60" data-delay="1">
+          L&rsquo;indirizzo Sistemi Informativi Aziendali mi ha dato una formazione doppia, tecnica ed economica,
+          che mi ha insegnato a guardare un&rsquo;azienda da più punti di vista.
+        </p>
+        <div class="card-grid cols-3 mt-section">
+          <div class="card card-lift reveal" data-delay="1">
+            <div class="card-ico"><i class="bi bi-code-square" aria-hidden="true"></i></div>
+            <h3>Area informatica</h3>
+            <p>Programmazione, basi di dati, reti e gestione dei sistemi informativi: le fondamenta tecniche del mio percorso.</p>
+          </div>
+          <div class="card card-lift reveal" data-delay="2">
+            <div class="card-ico"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i></div>
+            <h3>Area economico&#8209;aziendale</h3>
+            <p>Economia aziendale, diritto ed economia politica: capire i processi, i documenti e le regole che governano un&rsquo;impresa.</p>
+          </div>
+          <div class="card card-lift reveal" data-delay="3">
+            <div class="card-ico"><i class="bi bi-diagram-3" aria-hidden="true"></i></div>
+            <h3>Visione d&rsquo;insieme</h3>
+            <p>La capacità di collegare dati, tecnologia e organizzazione: è quello che ho messo in pratica durante la Formazione Scuola-Lavoro (FSL).</p>
+          </div>
+        </div>
+
+        <div class="panel reveal mt-section">
+          <h3 style="margin-bottom:1rem;">Competenze acquisite</h3>
+          <div class="split">
+            <ul class="check-list">
+              <li>Progettazione e interrogazione di <strong>basi di dati</strong></li>
+              <li>Fondamenti di <strong>programmazione</strong> e logica</li>
+              <li>Lettura dei principali <strong>documenti aziendali</strong> e contabili</li>
+            </ul>
+            <ul class="check-list">
+              <li>Analisi dei <strong>processi</strong> e dell&rsquo;organizzazione d&rsquo;impresa</li>
+              <li>Nozioni di <strong>diritto ed economia</strong> applicati a casi reali</li>
+              <li>Uso consapevole di <strong>strumenti digitali</strong> e tecnologie</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 TECNOLOGIA E PROGRAMMAZIONE -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="split">
+          <div class="reveal">
+            <div class="media-frame" style="background:var(--ink);aspect-ratio:4/3;display:grid;place-items:center;">
+              <i class="bi bi-terminal" aria-hidden="true" style="font-size:5rem;color:var(--accent);"></i>
+            </div>
+          </div>
+          <div>
+            <div class="h-with-num reveal"><span class="num">03</span><h2>Tecnologia &amp; programmazione</h2></div>
+            <p class="reveal" data-delay="1">
+              La tecnologia è la mia <strong>passione principale</strong>. Mi affascina il momento in cui qualche riga
+              di codice si trasforma in qualcosa che funziona: un problema astratto che diventa una soluzione concreta.
+            </p>
+            <p class="reveal" data-delay="1">
+              Mi interessano in particolare lo <strong>sviluppo software</strong> e l&rsquo;informatica come disciplina,
+              dalla logica che sta dietro a un programma fino al modo in cui i sistemi comunicano tra loro. Il Project Work
+              sulla <strong>sicurezza informatica</strong> ha rafforzato questa curiosità, mostrandomi anche il lato della
+              protezione dei dati e della consapevolezza digitale.
+            </p>
+            <p class="reveal" data-delay="2">
+              È proprio questa passione che mi spinge a voler proseguire gli studi in ambito informatico dopo il diploma.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 ESPERIENZA DI LAVORO -->
+    <section class="section" id="lavoro" style="padding-top:0;">
+      <div class="wrap">
+        <div class="h-with-num reveal"><span class="num">04</span><h2>Esperienza di lavoro</h2></div>
+        <p class="lead reveal mw-60" data-delay="1">
+          Accanto alla scuola lavoro gi&agrave; da quando avevo <strong>16 anni</strong>. Conciliare studio e lavoro mi ha
+          insegnato a gestire il tempo, a stare nei ritmi e a prendermi responsabilit&agrave; concrete.
+        </p>
+        <div class="split mt-section">
+          <!-- Linea del tempo dei lavori svolti -->
+          <div class="reveal" data-delay="1">
+            <div class="timeline">
+              <div class="tl-item">
+                <span class="tl-when">DAI 16 ANNI</span>
+                <h4>Fattorino e addetto all&rsquo;autolavaggio</h4>
+                <p>I miei primi lavori, spesso in contemporanea: consegna delle pizze a domicilio e lavaggio e aspirazione delle auto. Puntualit&agrave;, velocit&agrave; e cura del dettaglio.</p>
+              </div>
+              <div class="tl-item">
+                <span class="tl-when">DAL 2024</span>
+                <h4>Cameriere</h4>
+                <p>Servizio in sala a contatto con il pubblico: gestione dei tavoli, attenzione al cliente e lavoro di squadra anche nei momenti pi&ugrave; intensi.</p>
+              </div>
+              <div class="tl-item">
+                <span class="tl-when">OGGI</span>
+                <h4>Cameriere, spillatura, drink e cassa</h4>
+                <p>Oltre al servizio ai tavoli mi occupo della spillatura delle birre, della <strong>preparazione dei drink</strong> e della cassa: gestione dei pagamenti, precisione e responsabilit&agrave; sul denaro.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Competenze trasversali maturate sul lavoro -->
+          <div class="reveal" data-delay="2" style="display:grid;align-content:start;gap:1rem;">
+            <div class="panel">
+              <h3 style="margin-bottom:1rem;">Competenze acquisite</h3>
+              <ul class="check-list">
+                <li>Gestione del <strong>rapporto con il cliente</strong> e del pubblico</li>
+                <li>Lavoro <strong>sotto pressione</strong> nei momenti di maggiore affluenza</li>
+                <li><strong>Puntualit&agrave;</strong>, affidabilit&agrave; e rispetto degli orari</li>
+                <li>Precisione e responsabilit&agrave; nella <strong>gestione della cassa</strong></li>
+                <li><strong>Lavoro di squadra</strong> e collaborazione con i colleghi</li>
+                <li>Capacit&agrave; di <strong>organizzare il tempo</strong> tra lavoro e studio</li>
+              </ul>
+            </div>
+            <div class="callout">
+              <span class="co-label"><i class="bi bi-lightbulb" aria-hidden="true"></i> Cosa mi ha lasciato</span>
+              <p>Lavorare mentre studio mi ha reso pi&ugrave; <strong>maturo</strong> e concreto: ho imparato che impegno e costanza valgono in classe esattamente come dietro al bancone.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 CRESCITA PERSONALE -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="h-with-num reveal"><span class="num">05</span><h2>Crescita personale</h2></div>
+        <div class="split reveal" data-delay="1">
+          <p>
+            La scuola superiore non mi ha insegnato soltanto delle nozioni: mi ha fatto <strong>crescere</strong>.
+            In questi anni sono diventato più <strong>autonomo</strong> nello studio, più capace di organizzare il
+            tempo e di gestire scadenze e responsabilità senza che qualcuno me lo ricordasse.
+          </p>
+          <p>
+            Le esperienze di Formazione Scuola-Lavoro, fuori dalle mura della classe, mi hanno messo alla prova in contesti nuovi.
+            Ho imparato a <strong>adattarmi</strong>, a chiedere quando non capivo e a prendere l&rsquo;iniziativa quando
+            serviva. Ogni piccolo passo fuori dalla mia zona di comfort mi ha lasciato un po&rsquo; più <strong>sicuro</strong>
+            delle mie capacità.
+          </p>
+        </div>
+        <div class="callout reveal mt-section" data-delay="1" style="max-width:70ch;">
+          <span class="co-label"><i class="bi bi-lightbulb" aria-hidden="true"></i> Una cosa che porto con me</span>
+          <p>Ho capito che migliorare non significa fare tutto subito e bene, ma tornare ogni giorno sullo stesso obiettivo con un po&rsquo; più di consapevolezza.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 SPORT E DISCIPLINA -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="panel panel--ink reveal">
+          <div class="split">
+            <div>
+              <p class="eyebrow" style="color:var(--accent);">Sport &amp; disciplina</p>
+              <div class="h-with-num"><span class="num" style="color:var(--accent);">06</span><h2>Quello che lo sport mi ha insegnato</h2></div>
+              <p>
+                Coltivo una vera passione per il <strong>fitness</strong> e l&rsquo;<strong>allenamento</strong>. Non è solo
+                attività fisica: è una palestra di <strong>disciplina</strong>. Allenarsi con costanza significa presentarsi
+                anche nei giorni in cui non se ne ha voglia, fissare obiettivi e misurare i progressi nel tempo.
+              </p>
+              <p>
+                Ho notato che gli stessi principi si trasferiscono direttamente nello <strong>studio</strong>: la costanza,
+                la pazienza e l&rsquo;impegno che metto in allenamento sono diventati il mio metodo anche davanti ai libri.
+                I risultati, sia in palestra sia a scuola, arrivano dalla <strong>ripetizione</strong> e dalla dedizione.
+              </p>
+            </div>
+            <!-- Colonna destra: tutto il contenuto è raccolto in una card interna
+                 traslucida (stesso stile usato negli altri pannelli scuri del sito)
+                 e centrata verticalmente. Così lo spazio attorno diventa respiro
+                 intenzionale attorno a un riquadro, invece di un vuoto. La breve
+                 descrizione dà contesto ai tag delle "competenze trasversali". -->
+            <div style="display:grid;align-content:center;">
+              <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius);padding:1.6rem;">
+                <p class="eyebrow" style="color:var(--accent);margin-bottom:.7rem;">Competenze trasversali</p>
+                <p style="margin-bottom:1.1rem;">Le qualità che alleno con costanza in palestra sono le stesse che mi tornano utili nello studio e nel lavoro: ecco cosa mi porto dietro da ogni allenamento.</p>
+                <div class="tag-row" style="margin-bottom:1.3rem;">
+                  <span class="tag" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25);color:#fff;"><i class="bi bi-calendar-check" style="color:var(--accent);" aria-hidden="true"></i> Costanza</span>
+                  <span class="tag" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25);color:#fff;"><i class="bi bi-hourglass-split" style="color:var(--accent);" aria-hidden="true"></i> Pazienza</span>
+                  <span class="tag" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25);color:#fff;"><i class="bi bi-graph-up" style="color:var(--accent);" aria-hidden="true"></i> Progressi</span>
+                  <span class="tag" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25);color:#fff;"><i class="bi bi-fire" style="color:var(--accent);" aria-hidden="true"></i> Disciplina</span>
+                </div>
+                <p class="quote" style="color:#fff;font-size:1.2rem;margin:0;border-left:3px solid var(--accent);padding-left:1rem;line-height:1.45;">&ldquo;La disciplina costruita in palestra è la stessa che uso quando mi siedo a studiare.&rdquo;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 OBIETTIVI FUTURI -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="h-with-num reveal"><span class="num">07</span><h2>Obiettivi futuri</h2></div>
+        <p class="lead reveal mw-60 text-balance" data-delay="1">Ho le idee chiare su dove voglio andare: continuare a studiare ciò che mi appassiona.</p>
+        <div class="split mt-section">
+          <div class="reveal" data-delay="1">
+            <div class="timeline">
+              <div class="tl-item">
+                <span class="tl-when">SELEZIONE SUPERATA</span>
+                <h4>Universit&agrave; degli Studi di Milano</h4>
+                <p>Ho partecipato alla selezione dell&rsquo;ateneo e sono risultato <strong>idoneo e ammesso</strong>.</p>
+              </div>
+              <div class="tl-item">
+                <span class="tl-when">GIÀ FATTO</span>
+                <h4>Immatricolato al corso L&#8209;31</h4>
+                <p>Ho completato l&rsquo;<strong>immatricolazione</strong> al corso di laurea in Informatica (L&#8209;31).</p>
+              </div>
+              <div class="tl-item">
+                <span class="tl-when">DA SETTEMBRE</span>
+                <h4>Inizio della triennale in Informatica</h4>
+                <p>Proseguire nel campo che mi appassiona, costruendo basi solide di informatica.</p>
+              </div>
+              <div class="tl-item">
+                <span class="tl-when">A LUNGO TERMINE</span>
+                <h4>Lavorare nello sviluppo software</h4>
+                <p>Costruire una carriera nella tecnologia e nello sviluppo di software.</p>
+              </div>
+            </div>
+          </div>
+          <div class="reveal" data-delay="2" style="display:grid;align-content:center;">
+            <div class="card">
+              <div class="card-ico"><i class="bi bi-mortarboard" aria-hidden="true"></i></div>
+              <h3>Un percorso già avviato</h3>
+              <p>
+                Il diploma è un traguardo, ma per me è soprattutto un <strong>punto di partenza</strong>. Essermi gi&agrave;
+                <strong>immatricolato</strong> all&rsquo;Università degli Studi di Milano mi fa arrivare al prossimo capitolo
+                con le idee chiare e la motivazione giusta.
+              </p>
+              <a class="link-arrow" href="final-reflections.html">Read my final reflections <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- FOOTER condiviso: presentazione, mappa delle sezioni e riga finale.
+       L'anno del copyright (data-year) viene inserito dal JavaScript. -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html" aria-label="Gabriel Mazzucchelli — Home">
+            <span class="brand-mark">GM</span>
+            <span class="brand-name">Gabriel <span>Mazzucchelli</span></span>
+          </a>
+          <p>Portfolio del percorso di Formazione Scuola-Lavoro (FSL) e del progetto di Educazione Civica, realizzato per l'Esame di Stato. Indirizzo SIA — Sistemi Informativi Aziendali.</p>
+        </div>
+        <div>
+          <h4>Sezioni</h4>
+          <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chi-sono.html">Chi sono</a></li>
+          <li><a href="project-work.html">Project Work</a></li>
+          <li><a href="visite-aziendali.html">Visite aziendali</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Approfondimenti</h4>
+          <ul class="footer-links">
+          <li><a href="esperienza-fsl.html">Esperienza FSL</a></li>
+          <li><a href="educazione-civica.html">Educazione civica</a></li>
+          <li><a href="final-reflections.html">Final Reflections</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2025</span> Gabriel Mazzucchelli — Esame di Stato</span>
+        <span>Realizzato con HTML &amp; Bootstrap 5</span>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

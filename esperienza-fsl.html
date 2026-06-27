@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!--
+  Gabriel's Portfolio — pagina: Esperienza FSL (Formazione Scuola-Lavoro)
+  Sito statico (HTML + CSS + Bootstrap 5) realizzato per l'Esame di Stato.
+  Fogli condivisi: css/styles.css (stile e temi) e js/main.js (interazioni).
+  Autore: Gabriel Mazzucchelli.
+-->
+<html lang="it" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Esperienza FSL — Gabriel's Portfolio</title>
+  <meta name="description" content="Lo stage di tre settimane in Nettuno Srl: l'azienda, le attività svolte, le competenze sviluppate e i collegamenti interdisciplinari con Diritto, Economia Politica e Matematica (dipendenza e indipendenza statistica).">
+  <meta name="author" content="Gabriel Mazzucchelli">
+  <meta name="theme-color" content="#14233F">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Esperienza FSL — Gabriel's Portfolio">
+  <meta property="og:description" content="Lo stage di tre settimane in Nettuno Srl: l'azienda, le attività svolte, le competenze sviluppate e i collegamenti interdisciplinari con Diritto, Economia Politica e Matematica (dipendenza e indipendenza statistica).">
+  <meta property="og:locale" content="it_IT">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <!-- Script "anti-lampo": imposta subito il tema (chiaro/scuro) leggendo
+       la preferenza salvata in localStorage o quella di sistema, PRIMA che
+       la pagina venga disegnata, così si evita il lampo di colore al
+       caricamento. Aggiunge anche la classe "js" (usata dal CSS per le animazioni). -->
+  <script>(function(){try{var t=localStorage.getItem('gp-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}document.documentElement.classList.add('js');})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Salta al contenuto principale</a>
+  <!-- NAVBAR condivisa fra tutte le pagine: logo, link alle sezioni,
+       bottone del tema e menu per mobile. aria-current="page" marca la
+       pagina attiva; lo "skip-link" qui sopra serve a saltare al contenuto
+       usando la tastiera (accessibilità). -->
+  <header class="site-nav">
+    <nav class="nav-inner" aria-label="Navigazione principale">
+      <a class="brand" href="index.html" aria-label="Gabriel Mazzucchelli — Home">
+        <span class="brand-mark">GM</span>
+        <span class="brand-name">Gabriel <span class="sur">Mazzucchelli</span></span>
+      </a>
+      <div class="nav-collapse" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chi-sono.html">Chi sono</a></li>
+          <li><a href="project-work.html">Project Work</a></li>
+          <li><a href="visite-aziendali.html">Visite</a></li>
+          <li><a href="esperienza-fsl.html" class="active" aria-current="page">Esp. FSL</a></li>
+          <li><a href="educazione-civica.html">Ed. civica</a></li>
+          <li><a href="final-reflections.html">Reflections</a></li>
+        </ul>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Attiva il tema scuro">
+          <i class="bi bi-sun-fill" aria-hidden="true"></i><i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
+        </button>
+        <button class="nav-toggler" type="button" aria-label="Apri il menu di navigazione" aria-expanded="false" aria-controls="navMenu">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <!-- PAGE HEADER -->
+    <section class="section--tight">
+      <div class="wrap">
+        <div class="dot-grid" aria-hidden="true" style="opacity:.35;"></div>
+        <p class="eyebrow reveal">Esperienza FSL &middot; 4&ordf; Superiore</p>
+        <!-- Titolo lungo: tolgo il max-width stretto (quello da 20ch, pensato per i
+             titoli corti delle altre pagine, lo costringeva ad andare a capo troppo
+             presto lasciando vuota la metà destra). Senza cap sta su una riga sui
+             desktop e, sugli schermi più stretti, va a capo in modo bilanciato
+             grazie a text-balance. La lead è un po' più larga (72ch) per ridurre
+             gli a capo mantenendo una riga leggibile. -->
+        <h1 class="reveal text-balance" data-delay="1">Tre settimane di stage in Nettuno Srl</h1>
+        <p class="lead reveal" data-delay="2" style="max-width:72ch;">
+          La sezione più completa del mio percorso: un&rsquo;esperienza in azienda che ho collegato direttamente
+          alle materie di studio — <strong>Diritto</strong>, <strong>Economia Politica</strong> e <strong>Matematica</strong>.
+        </p>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- 01 AZIENDA -->
+    <section class="section">
+      <div class="wrap">
+        <div class="h-with-num reveal"><span class="num">01</span><h2>L&rsquo;azienda: Nettuno Srl</h2></div>
+        <p class="lead reveal mw-60" data-delay="1">
+          Ho svolto uno stage di <strong>tre settimane</strong> presso la <strong>Nettuno Srl</strong> di Castelli Calepio (BG),
+          storica azienda nella produzione di saponi industriali, creme cosmetiche e prodotti per la pulizia professionale.
+        </p>
+        <p class="reveal mw-60" data-delay="1">
+          Durante questo periodo ho potuto affiancare diversi reparti aziendali, partecipando ad attività manuali, logistiche,
+          chimiche e operative negli uffici commerciali. È stata un&rsquo;esperienza molto formativa, che mi ha permesso di
+          conoscere il mondo del lavoro da vicino e di mettere alla prova le mie capacità in contesti reali e diversi.
+        </p>
+
+        <div class="stat-strip reveal mt-section" data-delay="1">
+          <div class="cell"><b>1970</b><span>Anno di fondazione</span></div>
+          <div class="cell"><b>42</b><span>Dipendenti</span></div>
+          <div class="cell"><b>ISO 9001<span style="font-size:.7em;">+14001</span></b><span>Certificazioni</span></div>
+          <div class="cell"><b>3</b><span>Settimane di stage</span></div>
+        </div>
+
+        <div class="split split--narrow-media mt-section">
+          <div class="reveal">
+            <h3>La prima crema Nettuno</h3>
+            <p>
+              Uno degli oggetti più simbolici che ho fotografato durante lo stage è la <strong>prima crema prodotta
+              dalla Nettuno</strong>, conservata con grande cura in azienda. Rappresenta non solo l&rsquo;inizio di un
+              percorso imprenditoriale, ma anche l&rsquo;identità e la determinazione che hanno reso Nettuno un punto
+              di riferimento nel suo settore.
+            </p>
+            <p>
+              La Nettuno S.r.l. nasce nel <strong>1970 in provincia di Bergamo</strong>, quando Battista Fratus, dopo
+              un&rsquo;esperienza nel settore chimico, decide di fondare un&rsquo;impresa che unisse competenza, innovazione
+              e valori umani. Nel tempo l&rsquo;azienda è diventata <strong>leader nella pulizia professionale delle mani</strong>,
+              continuando a crescere nel rispetto della sostenibilità.
+            </p>
+          </div>
+          <div class="reveal" data-delay="1">
+            <figure class="media-frame contain" style="aspect-ratio:1/1;">
+              <img src="img/primacremanettuno.jpg" alt="La prima crema lavamani storica prodotta da Nettuno">
+            </figure>
+            <figcaption>La prima crema Nettuno, custodita in azienda come simbolo delle origini.</figcaption>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 ATTIVITA -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="h-with-num reveal"><span class="num">02</span><h2>Attività svolte</h2></div>
+        <p class="reveal mw-60" data-delay="1">
+          Anche se non ho svolto mansioni dirette da dipendente, ho partecipato a numerose <strong>attività di
+          supporto</strong>, imparando ad adattarmi a contesti organizzativi diversi e a comprendere il funzionamento
+          interno di un&rsquo;azienda strutturata.
+        </p>
+        <div class="panel reveal mt-section" data-delay="1">
+          <div class="split">
+            <ul class="check-list">
+              <li>Supporto nel <strong>magazzino</strong> e movimentazione leggera delle merci</li>
+              <li>Osservazione e assistenza nei <strong>reparti produttivi</strong></li>
+              <li>Affiancamento in semplici operazioni di <strong>laboratorio chimico</strong></li>
+              <li>Supporto negli <strong>uffici commerciali</strong> con archiviazione e documentazione</li>
+            </ul>
+            <ul class="check-list">
+              <li>Realizzazione della nuova <strong>mappa dei cestini</strong> per la raccolta differenziata, con Servizi Comunali S.p.A.</li>
+              <li><strong>Fotografie</strong> per la documentazione interna e la presentazione del lavoro</li>
+              <li>Applicazione di <strong>etichette</strong> su prodotti finiti e semilavorati</li>
+              <li>Preparazione di <strong>campioni</strong> destinati alle fiere</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 COMPETENZE -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="h-with-num reveal"><span class="num">03</span><h2>Competenze sviluppate</h2></div>
+        <p class="lead reveal mw-60" data-delay="1">
+          Le esperienze vissute mi hanno permesso di acquisire competenze trasversali, utili per qualsiasi futuro
+          contesto lavorativo.
+        </p>
+        <div class="card-grid cols-3 mt-section">
+          <div class="card card-lift reveal" data-delay="1">
+            <div class="card-ico"><i class="bi bi-tools" aria-hidden="true"></i></div>
+            <h3>Tecniche</h3>
+            <p>Osservazione dei processi produttivi, nozioni di base di laboratorio e gestione della documentazione.</p>
+            <div class="tag-row" style="margin-top:1rem;">
+              <span class="tag"><i class="bi bi-flask" aria-hidden="true"></i> Laboratorio</span>
+              <span class="tag"><i class="bi bi-box-seam" aria-hidden="true"></i> Logistica</span>
+            </div>
+          </div>
+          <div class="card card-lift reveal" data-delay="2">
+            <div class="card-ico"><i class="bi bi-briefcase" aria-hidden="true"></i></div>
+            <h3>Professionali</h3>
+            <p>Rispetto delle procedure aziendali, organizzazione del lavoro e capacità di muoversi in un&rsquo;impresa strutturata.</p>
+            <div class="tag-row" style="margin-top:1rem;">
+              <span class="tag"><i class="bi bi-list-check" aria-hidden="true"></i> Procedure</span>
+              <span class="tag"><i class="bi bi-bullseye" aria-hidden="true"></i> Precisione</span>
+            </div>
+          </div>
+          <div class="card card-lift reveal" data-delay="3">
+            <div class="card-ico"><i class="bi bi-person-arms-up" aria-hidden="true"></i></div>
+            <h3>Personali</h3>
+            <p>Collaborazione in team, capacità di adattamento e attenzione ai dettagli in ogni attività.</p>
+            <div class="tag-row" style="margin-top:1rem;">
+              <span class="tag"><i class="bi bi-people" aria-hidden="true"></i> Team</span>
+              <span class="tag"><i class="bi bi-eye" aria-hidden="true"></i> Attenzione</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 GALLERIA -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="h-with-num reveal"><span class="num">04</span><h2>Uno sguardo all&rsquo;interno dell&rsquo;azienda</h2></div>
+        <div class="reveal mt-section" data-delay="1">
+          <!-- Galleria foto: carosello Bootstrap che scorre da solo (data-bs-ride) ogni 3,8s -->
+          <div id="carouselNettuno" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3800" data-bs-pause="hover">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselNettuno" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Immagine 1"></button>
+              <button type="button" data-bs-target="#carouselNettuno" data-bs-slide-to="1" aria-label="Immagine 2"></button>
+              <button type="button" data-bs-target="#carouselNettuno" data-bs-slide-to="2" aria-label="Immagine 3"></button>
+              <button type="button" data-bs-target="#carouselNettuno" data-bs-slide-to="3" aria-label="Immagine 4"></button>
+              <button type="button" data-bs-target="#carouselNettuno" data-bs-slide-to="4" aria-label="Immagine 5"></button>
+              <button type="button" data-bs-target="#carouselNettuno" data-bs-slide-to="5" aria-label="Immagine 6"></button>
+              <button type="button" data-bs-target="#carouselNettuno" data-bs-slide-to="6" aria-label="Immagine 7"></button>
+              <button type="button" data-bs-target="#carouselNettuno" data-bs-slide-to="7" aria-label="Immagine 8"></button>
+              <button type="button" data-bs-target="#carouselNettuno" data-bs-slide-to="8" aria-label="Immagine 9"></button>
+              <button type="button" data-bs-target="#carouselNettuno" data-bs-slide-to="9" aria-label="Immagine 10"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active"><img src="img/vistadafuori.jpg" class="d-block w-100" alt="L'ingresso dello stabilimento Nettuno a Castelli Calepio (BG)"></div>
+              <div class="carousel-item"><img src="img/produzione.jpg" class="d-block w-100" alt="La linea di produzione con prodotti su pallet"></div>
+              <div class="carousel-item"><img src="img/capi.jpg" class="d-block w-100" alt="Personale della Nettuno Srl davanti all'insegna aziendale"></div>
+              <div class="carousel-item"><img src="img/rossa.jpg" class="d-block w-100" alt="La linea 'Rossa': gel lavamani professionale Nettuno in vari formati"></div>
+              <div class="carousel-item"><img src="img/prodotti.jpg" class="d-block w-100" alt="Alcuni prodotti cosmetici e detergenti dell'azienda"></div>
+              <div class="carousel-item"><img src="img/nettunoazienda.webp" class="d-block w-100" alt="Gamma di prodotti Nettuno"></div>
+              <div class="carousel-item"><img src="img/macrocream.webp" class="d-block w-100" alt="Crema lavamani della linea Macro"></div>
+              <div class="carousel-item"><img src="img/bianca.webp" class="d-block w-100" alt="Prodotto della linea Bianca"></div>
+              <div class="carousel-item"><img src="img/piu.webp" class="d-block w-100" alt="Prodotto della linea Più"></div>
+              <div class="carousel-item"><img src="img/dispenser.webp" class="d-block w-100" alt="Dispenser professionale Nettuno"></div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselNettuno" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Precedente</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselNettuno" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Successivo</span>
+            </button>
+          </div>
+          <figcaption style="text-align:center;">Alcune fotografie dell&rsquo;azienda Nettuno Srl: lo stabilimento, le linee di produzione e i prodotti.</figcaption>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 COLLEGAMENTI INTERDISCIPLINARI -->
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="h-with-num reveal"><span class="num">05</span><h2>Collegamenti interdisciplinari</h2></div>
+        <p class="lead reveal mw-60" data-delay="1">
+          Lo stage non è rimasto un&rsquo;esperienza isolata: l&rsquo;ho letto attraverso le materie che studio, scoprendo
+          come la teoria scolastica spieghi davvero ciò che accade in un&rsquo;impresa reale.
+        </p>
+
+        <!-- ACCORDION Bootstrap: pannelli a fisarmonica (Diritto/Economia/Matematica).
+             Ogni bottone apre il pannello collegato tramite data-bs-target; data-bs-parent
+             fa sì che aprendone uno gli altri si chiudano. Il primo è aperto (classe "show"). -->
+        <div class="accordion reveal mt-section" id="accordionFSL" data-delay="1">
+
+          <!-- DIRITTO -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="h-diritto">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#c-diritto" aria-expanded="true" aria-controls="c-diritto">
+                <i class="bi bi-bank" aria-hidden="true" style="margin-right:.7rem;"></i> Diritto — l&rsquo;impresa e la sua organizzazione
+              </button>
+            </h3>
+            <div id="c-diritto" class="accordion-collapse collapse show" aria-labelledby="h-diritto" data-bs-parent="#accordionFSL">
+              <div class="accordion-body">
+                <p>Lo stage mi ha fatto toccare con mano i concetti del diritto commerciale applicati a un&rsquo;azienda vera.</p>
+                <h4 style="font-size:1.05rem;">Profilo giuridico</h4>
+                <ul class="check-list" style="margin-bottom:1.2rem;">
+                  <li><strong>Forma giuridica:</strong> società a responsabilità limitata (S.r.l.), fondata nel 1970 da B. Fratus</li>
+                  <li><strong>Sede:</strong> Viale Industria 16/18, Castelli Calepio (BG)</li>
+                  <li><strong>Capitale sociale:</strong> &euro; 50.000 &middot; <strong>Categoria:</strong> piccola impresa (parametri UE)</li>
+                  <li><strong>Registro Imprese</strong> di Bergamo (REA 218463): pubblicità notizia e dichiarativa dei dati societari</li>
+                </ul>
+                <p>
+                  Ai sensi dell&rsquo;<strong>art. 2082 c.c.</strong>, Nettuno esercita professionalmente un&rsquo;attività economica
+                  organizzata per la produzione di beni (detergenti per l&rsquo;igiene delle mani). Rientra tra gli imprenditori
+                  commerciali secondo l&rsquo;<strong>art. 2195 c.c.</strong>, con l&rsquo;obbligo di iscrizione al Registro delle Imprese
+                  e di tenuta delle scritture contabili in forma ordinaria (libri sociali, libro giornale e libro degli inventari)
+                  ai sensi dell&rsquo;<strong>art. 2214 c.c.</strong> L&rsquo;organizzazione interna comprende i reparti di ricerca e
+                  sviluppo, produzione, controllo qualità (certificazioni <strong>ISO 9001</strong> e <strong>ISO 14001</strong>)
+                  e commerciale, in linea con l&rsquo;&ldquo;organizzazione dei fattori produttivi&rdquo; dell&rsquo;art. 2082 c.c.
+                </p>
+                <h4 style="font-size:1.05rem;">Governance e responsabilità</h4>
+                <p style="margin-bottom:0;">
+                  La società è gestita da un amministratore unico o da un consiglio di amministrazione, secondo le nomine
+                  dell&rsquo;assemblea dei soci. Gli amministratori hanno responsabilità civile e penale per eventuali violazioni
+                  di legge. L&rsquo;organo di controllo è obbligatorio solo oltre determinate soglie dimensionali
+                  (<strong>art. 2477 c.c.</strong>): ad oggi Nettuno non vi rientra e può avvalersi di un revisore facoltativo.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ECONOMIA -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="h-economia">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c-economia" aria-expanded="false" aria-controls="c-economia">
+                <i class="bi bi-graph-up-arrow" aria-hidden="true" style="margin-right:.7rem;"></i> Economia Politica — circuiti, valore aggiunto e PIL
+              </button>
+            </h3>
+            <div id="c-economia" class="accordion-collapse collapse" aria-labelledby="h-economia" data-bs-parent="#accordionFSL">
+              <div class="accordion-body">
+                <h4 style="font-size:1.05rem;">I circuiti economici</h4>
+                <p>
+                  <strong>Circuito reale:</strong> Nettuno trasforma materie prime chimiche in prodotti finiti, quali gel lavamani
+                  e creme barriera, avvalendosi di impianti industriali moderni e di manodopera specializzata. Questa produzione
+                  rappresenta il <strong>valore aggiunto</strong> dell&rsquo;azienda, che si traduce in contributo al <strong>PIL</strong> italiano.
+                </p>
+                <p>
+                  <strong>Circuito monetario:</strong> i ricavi derivano da vendite nazionali e internazionali — tra cui esportazioni
+                  in Spagna, Portogallo e Ucraina — mentre i costi comprendono materie prime, salari, energia, logistica e oneri finanziari.
+                </p>
+                <h4 style="font-size:1.05rem;">Contributo all&rsquo;economia reale</h4>
+                <p>
+                  Generando valore aggiunto (ricavi meno costi di produzione), Nettuno concorre al PIL nazionale, sostiene
+                  l&rsquo;occupazione locale e favorisce l&rsquo;indotto della filiera chimico-cosmetica lombarda. Grazie all&rsquo;export,
+                  apporta inoltre un saldo positivo alla bilancia commerciale italiana.
+                </p>
+                <h4 style="font-size:1.05rem;">Responsabilità sociale e Industria 4.0</h4>
+                <p>
+                  L&rsquo;azienda adotta pratiche sostenibili: è certificata ISO 9001 e ISO 14001 e alcuni prodotti recano il marchio
+                  <strong>Ecolabel UE</strong>, in linea con la <strong>corporate social responsibility</strong>. Gli investimenti in
+                  automazione e tracciabilità si collegano alla &ldquo;quarta rivoluzione industriale&rdquo; e all&rsquo;importanza
+                  dell&rsquo;innovazione per la competitività, temi evidenziati anche nel <strong>Rapporto Draghi 2024</strong>.
+                </p>
+                <p style="margin-bottom:0;">
+                  Il <strong>bilancio</strong>, depositato annualmente al Registro delle Imprese (conto economico, stato patrimoniale
+                  e nota integrativa), è lo strumento fondamentale di trasparenza verso gli stakeholder.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- MATEMATICA -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="h-matematica">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c-matematica" aria-expanded="false" aria-controls="c-matematica">
+                <i class="bi bi-bar-chart" aria-hidden="true" style="margin-right:.7rem;"></i> Matematica — dipendenza e indipendenza statistica
+              </button>
+            </h3>
+            <div id="c-matematica" class="accordion-collapse collapse" aria-labelledby="h-matematica" data-bs-parent="#accordionFSL">
+              <div class="accordion-body">
+                <p>
+                  Ho analizzato la produzione di Nettuno per tre prodotti rispetto al mercato (Italia / Estero), per verificare se
+                  il <strong>tipo di prodotto</strong> e il <strong>mercato di destinazione</strong> siano statisticamente indipendenti.
+                </p>
+                <div class="split" style="gap:1.5rem;align-items:start;">
+                  <div class="table-wrap">
+                    <table class="data">
+                      <caption>Tavola osservata — unità prodotte</caption>
+                      <thead>
+                        <tr><th scope="col">Prodotto \ Mercato</th><th scope="col">Italia</th><th scope="col">Estero</th><th scope="col">Totale</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr><th scope="row">Gel Igienizzante</th><td>180</td><td>60</td><td>240</td></tr>
+                        <tr><th scope="row">Crema Barriera</th><td>120</td><td>40</td><td>160</td></tr>
+                        <tr><th scope="row">Soluzioni Disinfettanti</th><td>100</td><td>50</td><td>150</td></tr>
+                        <tr class="total"><th scope="row">Totale</th><td>400</td><td>150</td><td>550</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="table-wrap">
+                    <table class="data">
+                      <caption>Tavola teorica — ipotesi di indipendenza</caption>
+                      <thead>
+                        <tr><th scope="col">Prodotto \ Mercato</th><th scope="col">Italia</th><th scope="col">Estero</th><th scope="col">Totale</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr><th scope="row">Gel Igienizzante</th><td>&asymp; 174</td><td>&asymp; 66</td><td>240</td></tr>
+                        <tr><th scope="row">Crema Barriera</th><td>&asymp; 116</td><td>&asymp; 44</td><td>160</td></tr>
+                        <tr><th scope="row">Soluzioni Disinfettanti</th><td>&asymp; 109</td><td>&asymp; 41</td><td>150</td></tr>
+                        <tr class="total"><th scope="row">Totale</th><td>400</td><td>150</td><td>550</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <p style="margin-top:1rem;font-size:.9rem;" class="muted">
+                  I valori teorici si ottengono con la formula <em>(totale di riga &times; totale di colonna) / totale generale</em> —
+                  ad esempio 400 &times; 240 / 550 &asymp; 174.
+                </p>
+                <div class="callout" style="margin-top:1rem;">
+                  <span class="co-label"><i class="bi bi-check2-circle" aria-hidden="true"></i> Conclusione</span>
+                  <p>Poiché le due tabelle <strong>non coincidono</strong>, i due caratteri X (tipo di prodotto) e Y (mercato) <strong>non sono statisticamente indipendenti</strong>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- FOOTER condiviso: presentazione, mappa delle sezioni e riga finale.
+       L'anno del copyright (data-year) viene inserito dal JavaScript. -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html" aria-label="Gabriel Mazzucchelli — Home">
+            <span class="brand-mark">GM</span>
+            <span class="brand-name">Gabriel <span>Mazzucchelli</span></span>
+          </a>
+          <p>Portfolio del percorso di Formazione Scuola-Lavoro (FSL) e del progetto di Educazione Civica, realizzato per l'Esame di Stato. Indirizzo SIA — Sistemi Informativi Aziendali.</p>
+        </div>
+        <div>
+          <h4>Sezioni</h4>
+          <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chi-sono.html">Chi sono</a></li>
+          <li><a href="project-work.html">Project Work</a></li>
+          <li><a href="visite-aziendali.html">Visite aziendali</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Approfondimenti</h4>
+          <ul class="footer-links">
+          <li><a href="esperienza-fsl.html">Esperienza FSL</a></li>
+          <li><a href="educazione-civica.html">Educazione civica</a></li>
+          <li><a href="final-reflections.html">Final Reflections</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2025</span> Gabriel Mazzucchelli — Esame di Stato</span>
+        <span>Realizzato con HTML &amp; Bootstrap 5</span>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
